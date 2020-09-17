@@ -1,17 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
-a {
-}
-
-button:focus {
-  outline: none;
+.green-recipe {
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 40px;
 }
 
 .recipe {
-  text-align: center;
+  min-height: 100vh;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
 }
 
-.recipe-title {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 40px;
+.search-form {
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  width: 15%;
+  padding: 10px;
+}
+
+.search-button {
+  padding: 1rem;
+  border: 0.1rem #808080 solid;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  border: 0.3rem #45b244 solid;
+}
+
+.recipes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.recipe-screen {
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px lightgrey;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background: palegoldenrod; */
+  align-items: center;
+  min-width: 40% 70%;
+}
+
+.image {
+  border-radius: 5%;
+  width: 300px;
+  height: 300px;
+}
+
+.recipe-button {
+  border: solid 2px #45b244;
+  background: transparent;
+  padding: 0.8rem 0.8rem;
+  margin: 0 0.2rem;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-left: 0.7rem;
+  cursor: pointer;
 }

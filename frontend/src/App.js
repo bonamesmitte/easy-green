@@ -8,7 +8,8 @@ import EasyEat from './screens/EasyEat';
 import EasyGrow from './screens/EasyGrow';
 import OurStory from './screens/OurStroy';
 import Acc from './screens/Acc';
-import Recipes from './Recipes';
+import RecipeScreen from './screens/RecipeScreen';
+import Recipes from './screens/Recipes';
 import Interior from './screens/Interior';
 import Contact from './screens/Contact';
 
@@ -57,15 +58,15 @@ function App() {
             <br />
             <br />
             <li>
-              <a href="index.html">Easy Eat</a>
+              <Link to="/easyeat">Easy Eat</Link>
             </li>
 
             <li>
-              <a href="index.html">Easy Grow</a>
+              <Link to="/easygrow">Easy Grow</Link>
             </li>
 
             <li>
-              <a href="index.html">Acc.</a>
+              <Link to="/acc">Acc.</Link>
             </li>
             <br />
             <br />
@@ -74,7 +75,7 @@ function App() {
             </li>
 
             <li>
-              <a href="index.html">Green Interior</a>
+              <Link to="/interior">Green Interior</Link>
             </li>
 
             <br />
