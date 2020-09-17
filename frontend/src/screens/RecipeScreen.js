@@ -1,19 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../recipe.css';
 
-const RecipeScreen = ({ title, calories, image, ingredients }) => {
+const RecipeScreen = ({ title, image, ingredients, url }) => {
   return (
-    <div className="recipe-screen">
-      <h1>{title}</h1>
-      <button className="recipe-button">View Recipe</button>
-      <p>{calories}</p>
-      <img className="image" src={image} alt={title} />
-      {/* <ol>
+    <Link
+      to={{
+        pathname: '/recipe-detail',
+        state: {
+          title,
+          image,
+          ingredients,
+          url,
+        },
+      }}
+    >
+      <div className="recipe-screen">
+        <h1>{title}</h1>
+        {/* <img className="image" src={image} alt={title} /> */}
+        {/* <ol>
         {ingredients.map((ingredient) => (
           <li>{ingredient.text}</li>
         ))}
       </ol> */}
-    </div>
+      </div>
+    </Link>
   );
 };
 

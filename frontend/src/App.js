@@ -8,8 +8,8 @@ import EasyEat from './screens/EasyEat';
 import EasyGrow from './screens/EasyGrow';
 import OurStory from './screens/OurStroy';
 import Acc from './screens/Acc';
-import RecipeScreen from './screens/RecipeScreen';
 import Recipes from './screens/Recipes';
+import RecipeDetail from './screens/RecipeDetail';
 import Interior from './screens/Interior';
 import Contact from './screens/Contact';
 
@@ -96,6 +96,7 @@ function App() {
             <Route path="/acc" component={Acc} />
             <Route path="/ourstory" component={OurStory} />
             <Route path="/recipes" component={Recipes} />
+            <Route path="/recipe-detail" component={RecipeDetail} />
             <Route path="/interior" component={Interior} />
             <Route path="/contact" component={Contact} />
           </div>

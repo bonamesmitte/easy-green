@@ -9,7 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "bootstrap": "^4.5.2",
+    "express": "^4.17.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-icon": "^2.3.3",
+    "semantic-ui-react": "^1.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",

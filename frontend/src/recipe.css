@@ -71,6 +71,23 @@
   border-radius: 10px;
   font-size: 1.8rem;
   font-weight: 500;
-  margin-left: 0.7rem;
+  margin-left: 0rem;
+  margin-bottom: 5rem;
   cursor: pointer;
+}
+
+.recipe-detail {
+  border: solid 2px #808080;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+}
+
+.detail-image {
+  border-radius: 5%;
+  width: 400px;
+  height: 400px;
 }
