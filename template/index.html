@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Easy Green</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <div class="brand">
+          <button onClick="openMenu()">&#9776;</button>
+          <a href="index.html">
+            <img
+              class="logo"
+              src="../images/logo6.png"
+              alt="easy green logo"
+              width="170"
+              height="100"
+          /></a>
+        </div>
+        <div class="header-links">
+          <a href="cart.html">Cart</a>
+          <a href="signin.html">Sign In</a>
+        </div>
+      </header>
+      <aside class="sidebar">
+        <h3>Shopping Categories</h3>
+        <button class="sidebar-close-button" onClick="closeMenu()">x</button>
+        <ul>
+          <li>
+            <a href="index.html">Easy Eat</a>
+          </li>
+
+          <li>
+            <a href="index.html">Easy Grow</a>
+          </li>
+          <br />
+          <li>
+            <a href="index.html">Easy Grow</a>
+          </li>
+        </ul>
+      </aside>
+      <main class="main">
+        <div class="content">
+          <ul class="products">
+            <li class="product">
+              <img
+                class="product-image"
+                src="../images/lettuce.jpg"
+                alt="product"
+              />
+              <div class="product-name">
+                <a href="product.html">Lettuce</a>
+              </div>
+              <div class="product-price" class="price">$3.50</div>
+            </li>
+
+            <li class="product">
+              <img
+                class="product-image"
+                src="../images/lettuce.jpg"
+                alt="product"
+              />
+              <div class="product-name">
+                <a href="product.html">Lettuce</a>
+              </div>
+              <div class="product-price" class="price">$3.50</div>
+            </li>
+
+            <li class="product">
+              <img
+                class="product-image"
+                src="../images/lettuce.jpg"
+                alt="product"
+              />
+              <div class="product-name">
+                <a href="product.html">Lettuce</a>
+              </div>
+              <div class="product-price" class="price">$3.50</div>
+            </li>
+
+            <li class="product">
+              <img
+                class="product-image"
+                src="../images/lettuce.jpg"
+                alt="product"
+              />
+              <div class="product-name">
+                <a href="product.html">Lettuce</a>
+              </div>
+              <div class="product-price" class="price">$3.50</div>
+            </li>
+
+            <li class="product">
+              <img
+                class="product-image"
+                src="../images/lettuce.jpg"
+                alt="product"
+              />
+              <div class="product-name">
+                <a href="product.html">Lettuce</a>
+              </div>
+              <div class="product-price" class="price">$3.50</div>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">All right reserved.</footer>
+    </div>
+    <script>
+      function openMenu() {
+        document.querySelector('.sidebar').classList.add('open');
+      }
+      function closeMenu() {
+        document.querySelector('.sidebar').classList.remove('open');
+      }
+    </script>
+  </body>
+</html>

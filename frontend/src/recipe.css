@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+a {
+}
+
+button:focus {
+  outline: none;
+}
+
+.recipe {
+  text-align: center;
+}
+
+.recipe-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 40px;
+}
