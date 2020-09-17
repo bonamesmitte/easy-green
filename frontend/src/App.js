@@ -13,6 +13,7 @@ import RecipeDetail from './screens/RecipeDetail';
 import Interior from './screens/Interior';
 import Contact from './screens/Contact';
 import MemberList from './screens/MemberList';
+import SignUp from './screens/SignUp';
 
 function App() {
   const openMenu = () => {
@@ -41,8 +42,9 @@ function App() {
             </Link>
           </div>
           <div className="header-links">
-            <a href="cart.html">Cart</a>
-            <a href="signin.html">Sign In</a>
+            <Link to="/cart/:id?">Cart</Link>
+            <Link to="/signin">Sign In</Link>
+            <Link to="/signup">Sign Up</Link>
           </div>
         </header>
 
@@ -101,6 +103,8 @@ function App() {
             <Route path="/interior" component={Interior} />
             <Route path="/contact" component={Contact} />
             <Route path="/admin/member-list" component={MemberList} />
+            {/* <Route path="/signin" component={SignIn} /> */}
+            <Route path="/signup" component={SignUp} />
           </div>
         </main>
         <footer className="footer">© Alice Yoo 2020</footer>
