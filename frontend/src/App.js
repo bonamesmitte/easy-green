@@ -12,6 +12,7 @@ import Recipes from './screens/Recipes';
 import RecipeDetail from './screens/RecipeDetail';
 import Interior from './screens/Interior';
 import Contact from './screens/Contact';
+import MemberList from './screens/MemberList';
 
 function App() {
   const openMenu = () => {
@@ -99,6 +100,7 @@ function App() {
             <Route path="/recipe-detail" component={RecipeDetail} />
             <Route path="/interior" component={Interior} />
             <Route path="/contact" component={Contact} />
+            <Route path="/admin/member-list" component={MemberList} />
           </div>
         </main>
         <footer className="footer">© Alice Yoo 2020</footer>
