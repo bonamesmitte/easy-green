@@ -8,6 +8,29 @@ class ListMemberComponent extends Component {
     this.state = {
       members: [],
     };
+    this.addMember = this.addMember.bind(this);
+    this.editMember = this.editMember.bind(this);
+    this.deleteMember = this.deleteMember.bind(this);
+  }
+
+  viewMember(id) {
+    this.props.history.push(`/admin/view-member/${id}`);
+  }
+
+  deleteMember(id) {
+    MemberService.deleteMember(id).then((res) => {
+      this.setState({
+        members: this.state.members.filter((member) => member.id !== id),
+      });
+    });
+  }
+
+  editMember(id) {
+    this.props.history.push(`/admin/add-member/${id}`);
+  }
+
+  addMember() {
+    this.props.history.push('/admin/add-member/_add');
   }
 
   componentDidMount() {
@@ -18,17 +41,38 @@ class ListMemberComponent extends Component {
 
   render() {
     return (
-      <div>
-        <h2 className="text-center">Member List</h2>
+      <div className="table">
+        <h2
+          className="text-center"
+          style={{
+            marginTop: '20px',
+            fontFamily: 'sans-serif',
+          }}
+        >
+          Member List
+        </h2>
+        <div className="row">
+          <button
+            style={{
+              marginBottom: '20px',
+              fontSize: '20px',
+            }}
+            className="btn btn-primary"
+            onClick={this.addMember}
+          >
+            Add Member
+          </button>
+        </div>
         <div className="row">
           <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
               <tr>
-                <th>Member First Name</th>
-                <th>Member Last Name</th>
-                <th>Member Email</th>
-                <th>Member Phone Number</th>
-                <th>Member Address</th>
+                <th>Member_Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Address</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -36,11 +80,36 @@ class ListMemberComponent extends Component {
             <tbody>
               {this.state.members.map((member) => (
                 <tr key={member.id}>
+                  <td>{member.id}</td>
                   <td>{member.firstName}</td>
                   <td>{member.lastName}</td>
                   <td>{member.email}</td>
                   <td>{member.phoneNumber}</td>
                   <td>{member.address}</td>
+                  <td>
+                    <button
+                      onClick={() => this.editMember(member.id)}
+                      className="btn btn-info"
+                    >
+                      Update
+                    </button>
+
+                    <button
+                      style={{ marginLeft: '15px' }}
+                      onClick={() => this.deleteMember(member.id)}
+                      className="btn btn-danger"
+                    >
+                      Delete
+                    </button>
+
+                    <button
+                      style={{ marginLeft: '15px' }}
+                      onClick={() => this.viewMember(member.id)}
+                      className="btn btn-info"
+                    >
+                      View
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>

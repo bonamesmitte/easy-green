@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../recipe.css';
+import '../cssStyle/recipe.css';
 
 class RecipeDetail extends Component {
   componentDidMount() {

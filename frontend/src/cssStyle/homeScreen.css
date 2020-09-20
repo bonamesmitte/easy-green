@@ -32,7 +32,7 @@
   justify-content: space-evenly;
 }
 .home .img-container .card {
-  width: 25em;
+  width: 40em;
   text-align: center;
   padding: 1em;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -40,6 +40,7 @@
 
 .home .img-container .card p {
   color: #525252;
+  font-size: 25px;
 }
 
 .home .img-container .card .role {
@@ -76,7 +77,7 @@
 .home button {
   padding: 4px;
   font-size: 17px;
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   border-radius: 3px;
   border-color: lightgrey;

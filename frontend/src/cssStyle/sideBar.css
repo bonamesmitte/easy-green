@@ -1,0 +1,49 @@
+/* Side bar */
+.brand button {
+  font-size: 5rem;
+  padding: 0.5rem;
+  padding-bottom: 5rem;
+  background: none;
+  border: none;
+}
+
+.sidebar {
+  position: fixed;
+  transition: all 0.5s;
+  transform: translateX(-30rem);
+  width: 30rem;
+  background-color: whitesmoke;
+  height: 100%;
+}
+
+.sidebar li {
+  list-style-type: none;
+  font: 2.5rem monospace;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.sidebar h3 {
+  font: 2.1rem Helvetica;
+  font-weight: bold;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+.sidebar.open {
+  transform: translate(0);
+}
+
+.sidebar-close-button {
+  border-radius: 50%;
+  border: 0.5rem palegoldenrod;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+  padding-top: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 1.5rem;
+}

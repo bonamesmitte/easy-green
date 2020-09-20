@@ -13,7 +13,10 @@ import RecipeDetail from './screens/RecipeDetail';
 import Interior from './screens/Interior';
 import Contact from './screens/Contact';
 import MemberList from './screens/MemberList';
-import SignUp from './screens/SignUp';
+import ListMemberComponent from './components/ListMemberComponent';
+import './cssStyle/sideBar.css';
+// import SignUp from './screens/SignUp';
+// import SignIn from './screens/SignIn';
 
 function App() {
   const openMenu = () => {
@@ -104,7 +107,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/admin/member-list" component={MemberList} />
             {/* <Route path="/signin" component={SignIn} /> */}
-            <Route path="/signup" component={SignUp} />
+            {/* <Route path="/signup" component={SignUp} /> */}
           </div>
         </main>
         <footer className="footer">© Alice Yoo 2020</footer>

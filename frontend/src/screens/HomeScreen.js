@@ -1,5 +1,5 @@
 import React from 'react';
-import '../homeScreen.css';
+import '../cssStyle/homeScreen.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const HomeScreen = () => (

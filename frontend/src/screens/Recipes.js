@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../recipe.css';
+import '../cssStyle/recipe.css';
 import RecipeScreen from './RecipeScreen';
 
 const Recipes = () => {
@@ -36,7 +36,7 @@ const Recipes = () => {
   return (
     <div className="recipe">
       <div>
-        <h3 className="green-recipe">Salad Recipe</h3>
+        <h1 className="green-recipe">Salad Recipe</h1>
       </div>
       <form onSubmit={getSearch} className="search-form">
         <input

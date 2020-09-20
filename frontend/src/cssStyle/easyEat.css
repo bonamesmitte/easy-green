@@ -15,14 +15,6 @@ body {
   margin: 0;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
-a:link {
-  text-decoration: none;
-}
-
 .button {
   font-size: 1.6rem;
 }
@@ -95,80 +87,58 @@ a:link {
   color: white;
 }
 
-/* Side bar */
-.brand button {
-  font-size: 5rem;
-  padding: 0.5rem;
-  padding-bottom: 5rem;
-  background: none;
-  border: none;
+/* Easy Eat */
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.sidebar {
-  position: fixed;
-  transition: all 0.5s;
-  transform: translateX(-30rem);
-  width: 30rem;
-  background-color: whitesmoke;
+a:hover {
+  color: #45b244;
+  text-decoration: none;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.products li {
+  list-style-type: none;
+  flex: 0 1 34rem;
+  margin: 1rem;
+  padding: 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 }
 
-.sidebar li {
-  list-style-type: none;
-  font: 2.5rem monospace;
-  margin-left: 60px;
-  margin-top: 30px;
+.product-image {
+  max-width: 34rem;
+  max-height: 34rem;
 }
 
-.sidebar h3 {
-  font: 2.1rem Helvetica;
-  font-weight: bold;
-  margin-left: 40px;
-  margin-top: 15px;
-}
-
-.sidebar.open {
-  transform: translate(0);
-}
-
-.sidebar-close-button {
-  border-radius: 50%;
-  border: 0.5rem palegoldenrod;
-  width: 3rem;
-  height: 3rem;
-  padding: 0.5rem;
+.product-name {
   font-size: 2rem;
-  padding-top: 0;
-  cursor: pointer;
-  position: absolute;
-  right: 0.5rem;
-  top: 1.5rem;
+  font-weight: bold;
+  list-style-type: none;
 }
 
-/* table */
-.table {
-  font-size: 20px;
+.product-price {
+  font-size: 2rem;
+  /* font-weight: bold; */
 }
 
-.register {
-  font-size: 20px;
+a:hover {
+  text-decoration: none;
 }
 
-.register-container {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.register input {
-  font-size: 15px;
-}
-
-.register button {
-  font-size: 15px;
-  margin-top: 15px;
-}
-
-/* member detail */
-.detail label {
-  color: blue;
+a:link {
+  text-decoration: none;
 }
