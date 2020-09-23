@@ -54,7 +54,7 @@ function ProductScreen(props) {
           <div className="details-action">
             <ul>
               <li>Price: {product.price}</li>
-              <li>Status: {product.status}</li>
+              {/* <li>Status: {product.status}</li> */}
               <li>
                 Qty:
                 <select

@@ -12,9 +12,7 @@ function EasyEat(props) {
 
   useEffect(() => {
     dispatch(listProducts());
-    return () => {
-      //
-    };
+    return () => {};
   }, []);
 
   return loading ? (

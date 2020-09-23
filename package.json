@@ -9,8 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.6",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-icon": "^2.3.3",
     "semantic-ui-react": "^1.2.1"

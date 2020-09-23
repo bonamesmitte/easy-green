@@ -15,10 +15,14 @@ import Contact from './screens/Contact';
 import MemberList from './screens/MemberList';
 import ListMemberComponent from './components/ListMemberComponent';
 import './cssStyle/sideBar.css';
-// import SignUp from './screens/SignUp';
-// import SignIn from './screens/SignIn';
+import SigninScreen from './screens/SigninScreen';
+import RegisterScreen from './screens/RegisterScreen';
+import { useSelector } from 'react-redux';
 
 function App() {
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+
   const openMenu = () => {
     document.querySelector('.sidebar').classList.add('open');
   };
@@ -46,8 +50,13 @@ function App() {
           </div>
           <div className="header-links">
             <Link to="/cart/:id?">Cart</Link>
-            <Link to="/signin">Sign In</Link>
-            <Link to="/signup">Sign Up</Link>
+            {userInfo ? (
+              <Link to="/profile">{userInfo.name}</Link>
+            ) : (
+              <Link to="/signin">Sign In</Link>
+            )}
+
+            <Link to="/register">Sign Up</Link>
           </div>
         </header>
 
@@ -106,8 +115,8 @@ function App() {
             <Route path="/interior" component={Interior} />
             <Route path="/contact" component={Contact} />
             <Route path="/admin/member-list" component={MemberList} />
-            {/* <Route path="/signin" component={SignIn} /> */}
-            {/* <Route path="/signup" component={SignUp} /> */}
+            <Route path="/signin" component={SigninScreen} />
+            <Route path="/register" component={RegisterScreen} />
           </div>
         </main>
         <footer className="footer">© Alice Yoo 2020</footer>
