@@ -1,0 +1,28 @@
+.organic p {
+  font: 30px Helvetica;
+  margin-top: 15px;
+  text-align: center;
+}
+
+#fp {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.admin-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.product {
+  padding: 1.5em 2.25em;
+  background-color: palegreen;
+  margin-right: 35px;
+}
+
+.employee {
+  padding: 1.5em 2.25em;
+  background-color: palegoldenrod;
+}
