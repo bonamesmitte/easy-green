@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   const product = await Product.findOne({ _id: req.params.id });
   if (product) {
-    res.send(products);
+    res.send(product);
   } else {
     res.status(404).send({ message: 'Product Not Found.' });
   }
