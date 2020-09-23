@@ -18,6 +18,7 @@ import './cssStyle/sideBar.css';
 import SigninScreen from './screens/SigninScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import { useSelector } from 'react-redux';
+import ProductsScreen from './screens/ProductsScreen';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -115,6 +116,7 @@ function App() {
             <Route path="/interior" component={Interior} />
             <Route path="/contact" component={Contact} />
             <Route path="/admin/member-list" component={MemberList} />
+            <Route path="/products" component={ProductsScreen} />
             <Route path="/signin" component={SigninScreen} />
             <Route path="/register" component={RegisterScreen} />
           </div>

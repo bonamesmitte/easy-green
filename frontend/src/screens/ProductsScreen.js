@@ -10,29 +10,33 @@ import { Link } from 'react-router-dom';
 import data from '../data';
 
 function ProductsScreen(props) {
-  const productSave = useSelector((state) => state.productDetails);
+  // const productSave = useSelector((state) => state.productDetails);
 
-  // const [modalVisible, setModalVisible] = useState(false);
-  // const [id, setId] = useState('');
-  // const [name, setName] = useState('');
-  // const [price, setPrice] = useState('');
-  // const [image, setImage] = useState('');
-  // const [description, setDescription] = useState('');
-  // const productList = useSelector((state) => state.productList);
-  // const { loading, products, error } = productList;
-  // const productSave = useSelector((state) => state.productSave);
-  // const {
-  //   loading: loadingSave,
-  //   success: successSave,
-  //   error: errorSave,
-  // } = productSave;
+  const [modalVisible, setModalVisible] = useState(false);
+  const [id, setId] = useState('');
+  const [name, setName] = useState('');
+  const [price, setPrice] = useState('');
+  const [image, setImage] = useState('');
+  const [description, setDescription] = useState('');
 
-  // const productDelete = useSelector((state) => state.productDelete);
-  // const {
-  //   loading: loadingDelete,
-  //   success: successDelete,
-  //   error: errorDelete,
-  // } = productDelete;
+  const productList = useSelector((state) => state.productList);
+  const { loading, products, error } = productList;
+
+  const productSave = useSelector((state) => state.productSave);
+
+  const {
+    loading: loadingSave,
+    success: successSave,
+    error: errorSave,
+  } = productSave;
+
+  const productDelete = useSelector((state) => state.productDelete);
+
+  const {
+    loading: loadingDelete,
+    success: successDelete,
+    error: errorDelete,
+  } = productDelete;
 
   const dispatch = useDispatch();
 
@@ -41,47 +45,48 @@ function ProductsScreen(props) {
     return () => {};
   }, []);
 
-  // useEffect(() => {
-  //   if (successSave) {
-  //     setModalVisible(false);
-  //   }
-  //   dispatch(listProducts());
-  //   return () => {};
-  // }, [successSave, successDelete]);
+  useEffect(() => {
+    if (successSave) {
+      setModalVisible(false);
+    }
+    dispatch(listProducts());
+    return () => {};
+  }, [successSave, successDelete]);
 
-  // const openModal = (product) => {
-  //   setModalVisible(true);
-  //   setId(product._id);
-  //   setName(product.name);
-  //   setPrice(product.price);
-  //   setImage(product.image);
-  //   setDescription(product.description);
-  // };
-  // const submitHandler = (e) => {
-  //   e.preventDefault();
-  //   dispatch(saveProduct({ _id: id, name, price, image, description }));
-  // };
+  const openModal = (product) => {
+    setModalVisible(true);
+    setId(product._id);
+    setName(product.name);
+    setPrice(product.price);
+    setImage(product.image);
+    setDescription(product.description);
+  };
 
-  // const deleteHandler = (product) => {
-  //   dispatch(deleteProduct(product._id));
-  // };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(saveProduct({ _id: id, name, price, image, description }));
+  };
 
-  // const handleChange = (e) => {
-  //   let { name, value } = e.target;
-  //   console.log(name, image, description, price);
-  //   if (name == 'name') {
-  //     setName(value);
-  //   }
-  //   if (name == 'image') {
-  //     setImage(value);
-  //   }
-  //   if (name == 'price') {
-  //     setPrice(value);
-  //   }
-  //   if (name == 'description') {
-  //     setDescription(value);
-  //   }
-  // };
+  const deleteHandler = (product) => {
+    dispatch(deleteProduct(product._id));
+  };
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+    console.log(name, image, description, price);
+    if (name == 'name') {
+      setName(value);
+    }
+    if (name == 'image') {
+      setImage(value);
+    }
+    if (name == 'price') {
+      setPrice(value);
+    }
+    if (name == 'description') {
+      setDescription(value);
+    }
+  };
 
   return (
     <div className="content content-margined">
