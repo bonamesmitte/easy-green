@@ -10,6 +10,15 @@ router.get('/', async (req, res) => {
   res.send(products);
 });
 
+router.get('/:id', async (req, res) => {
+  const product = await Product.findOne({ _id: req.params.id });
+  if (product) {
+    res.send(products);
+  } else {
+    res.status(404).send({ message: 'Product Not Found.' });
+  }
+});
+
 router.put('/:id', async (req, res) => {
   const productId = req.params.id;
   const product = await Product.findOne({ _id: productId });
@@ -27,15 +36,6 @@ router.put('/:id', async (req, res) => {
     return res.status(500).send({ message: 'Product Updated.' });
   }
   return res.status(500).send({ message: 'Error in Updating Product.' });
-});
-
-router.get('/:id', async (req, res) => {
-  const product = await Product.findOne({ _id: req.params.id });
-  if (product) {
-    res.send(products);
-  } else {
-    res.status(404).send({ message: 'Product Not Found.' });
-  }
 });
 
 router.post('/', async (req, res) => {
