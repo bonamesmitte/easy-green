@@ -22,7 +22,7 @@ router.get('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
   const productId = req.params.id;
   const product = await Product.findOne({ _id: productId });
-  if (!product._id) {
+  if (product) {
     product.name = req.body.name;
     product.price = req.body.price;
     product.image = req.body.image;

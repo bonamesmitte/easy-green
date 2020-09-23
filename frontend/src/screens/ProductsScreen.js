@@ -63,7 +63,6 @@ function ProductsScreen(props) {
   };
 
   const submitHandler = (e) => {
-    e.preventDefault();
     dispatch(saveProduct({ _id: id, name, price, image, description }));
   };
 
