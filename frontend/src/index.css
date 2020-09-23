@@ -303,3 +303,9 @@ a:link {
 .categories a:hover {
   background-color: #c0c0c0;
 }
+
+/* login page */
+.avatar {
+  margin-left: 450px;
+  margin-top: 0px;
+}

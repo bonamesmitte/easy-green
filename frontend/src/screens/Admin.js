@@ -11,12 +11,12 @@ const Admin = () => (
           <b>Management Page</b>
         </p>
         <div className="admin-button">
-          <button className="product">
+          <button className="productButton">
             <Link to="/products">
               <b>Product Management</b>
             </Link>
           </button>
-          <button className="employee">
+          <button className="employeeButton">
             <Link to="admin/member-list">
               <b>Employee Management</b>
             </Link>

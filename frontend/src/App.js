@@ -23,6 +23,7 @@ import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import Thankyou from './screens/Thankyou';
 import Admin from './screens/Admin';
+import Login from './screens/Login';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -127,6 +128,7 @@ function App() {
             <Route path="/payment" component={PaymentScreen} />
             <Route path="/ordercomplete" component={Thankyou} />
             <Route path="/admin" component={Admin} />
+            <Route path="/profile" component={Login} />
           </div>
         </main>
         <footer className="footer">© Alice Yoo 2020</footer>

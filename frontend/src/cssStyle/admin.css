@@ -16,13 +16,13 @@
   font-size: 20px;
 }
 
-.product {
+.productButton {
   padding: 1.5em 2.25em;
   background-color: palegreen;
   margin-right: 35px;
 }
 
-.employee {
+.employeeButton {
   padding: 1.5em 2.25em;
   background-color: palegoldenrod;
 }
