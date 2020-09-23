@@ -21,6 +21,7 @@ import { useSelector } from 'react-redux';
 import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
+import Thankyou from './screens/Thankyou';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -123,6 +124,7 @@ function App() {
             <Route path="/register" component={RegisterScreen} />
             <Route path="/shipping" component={ShippingScreen} />
             <Route path="/payment" component={PaymentScreen} />
+            <Route path="/ordercomplete" component={Thankyou} />
           </div>
         </main>
         <footer className="footer">© Alice Yoo 2020</footer>
