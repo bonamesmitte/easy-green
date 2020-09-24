@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc44d7d5bf00460caa638c9f1b1bd48c",
+    "revision": "00df092ffdca07552d8b92b400db3914",
     "url": "/easy-green/index.html"
   },
   {
-    "revision": "104ca3c15d4c058ce928",
+    "revision": "c359b1cfd8c159f0058a",
     "url": "/easy-green/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "e18858daecd8d702ba8e",
+    "revision": "799f6bdcbb1cd0e4ef28",
     "url": "/easy-green/static/css/main.380ece2d.chunk.css"
   },
   {
-    "revision": "104ca3c15d4c058ce928",
-    "url": "/easy-green/static/js/2.c800cbd2.chunk.js"
+    "revision": "c359b1cfd8c159f0058a",
+    "url": "/easy-green/static/js/2.7a1894d7.chunk.js"
   },
   {
     "revision": "6b3248a1692933689dcb27b9e1ed5092",
-    "url": "/easy-green/static/js/2.c800cbd2.chunk.js.LICENSE.txt"
+    "url": "/easy-green/static/js/2.7a1894d7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e18858daecd8d702ba8e",
-    "url": "/easy-green/static/js/main.bbe65979.chunk.js"
+    "revision": "799f6bdcbb1cd0e4ef28",
+    "url": "/easy-green/static/js/main.fc95d62b.chunk.js"
   },
   {
     "revision": "00e76535a45dfc132b1c",
