@@ -89,7 +89,9 @@ function RegisterScreen(props) {
               to={redirect === '/' ? 'signin' : 'signin?redirect=' + redirect}
               className="button full-width"
               id="button-secondary"
-            ></Link>
+            >
+              Log-In
+            </Link>
           </li>
         </ul>
       </form>

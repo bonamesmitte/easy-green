@@ -93,6 +93,7 @@ a:link {
   justify-content: center;
   align-items: center;
   color: white;
+  font-size: 17px;
 }
 
 /* Side bar */
@@ -118,6 +119,7 @@ a:link {
   font: 2.5rem monospace;
   margin-left: 60px;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 .sidebar h3 {
@@ -125,6 +127,16 @@ a:link {
   font-weight: bold;
   margin-left: 40px;
   margin-top: 15px;
+}
+
+.sidebar a {
+  color: black;
+}
+
+.sidebar a:hover {
+  color: #45b244;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .sidebar.open {

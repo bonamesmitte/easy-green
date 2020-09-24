@@ -98,11 +98,10 @@ function App() {
               <Link to="/recipes">Green Recipes</Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/interior">Green Interior</Link>
-            </li>
+            </li> */}
 
-            <br />
             <br />
             <li>
               <Link to="/contact">Contact</Link>

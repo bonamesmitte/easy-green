@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../cssStyle/easyEat.css';
 import data from '../data';
-import brasil from '../brasil.jpeg';
 import { Link, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { listProducts } from '../actions/productActions';
 
 function EasyEat() {
   const [product, setProduct] = useState([]);
+  const productList = useSelector((state) => state.productList);
+  const { products, loading, error } = productList;
 
   useEffect(() => {
     const fetchData = async () => {

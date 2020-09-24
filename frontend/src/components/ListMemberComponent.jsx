@@ -49,7 +49,7 @@ class ListMemberComponent extends Component {
             fontFamily: 'sans-serif',
           }}
         >
-          Member List
+          Employee List
         </h2>
         <div className="row">
           <button
@@ -60,14 +60,14 @@ class ListMemberComponent extends Component {
             className="btn btn-primary"
             onClick={this.addMember}
           >
-            Add Member
+            Add Employee
           </button>
         </div>
         <div className="row">
           <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
               <tr>
-                <th>Member_Id</th>
+                <th>Employee_Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
