@@ -24,10 +24,8 @@ import PaymentScreen from './screens/PaymentScreen';
 import Thankyou from './screens/Thankyou';
 import Admin from './screens/Admin';
 import Login from './screens/Login';
-import Etc from './screens/EasyEat';
 import AllProductScreen from './screens/AllProductScreen';
 import AllGrowProductScreen from './screens/AllGrowProductScreen';
-import data1 from './data1';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -94,10 +92,6 @@ function App() {
               <Link to="/acc">Acc.</Link>
             </li>
 
-            <li>
-              <Link to="/etc">etc.</Link>
-            </li>
-
             <br />
             <br />
             <li>
@@ -123,7 +117,6 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/easyeat" component={EasyEat} />
             <Route path="/easygrow" component={EasyGrow} />
-            <Route path="/acc" component={Acc} />
             <Route path="/ourstory" component={OurStory} />
             <Route path="/recipes" component={Recipes} />
             <Route path="/recipe-detail" component={RecipeDetail} />
@@ -138,7 +131,7 @@ function App() {
             <Route path="/ordercomplete" component={Thankyou} />
             <Route path="/admin" component={Admin} />
             <Route path="/profile" component={Login} />
-            <Route path="/etc" component={Etc} />
+            <Route path="/acc" component={Acc} />
             <Route path="/alleat/:id" component={AllProductScreen} />
             <Route path="/allgrow/:id" component={AllGrowProductScreen} />
           </div>
