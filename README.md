@@ -4,7 +4,7 @@ A website for home gardening and vetical farming products
 
 # Demo Website
 
-👉
+👉 https://easy-green.herokuapp.com/
 
 # Easy Green
 
