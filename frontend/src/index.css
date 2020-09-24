@@ -76,6 +76,8 @@ a:link {
 
 .header-links a:hover {
   color: #45b244;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 .main {
