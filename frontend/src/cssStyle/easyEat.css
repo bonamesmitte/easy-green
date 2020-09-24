@@ -139,3 +139,7 @@ a:hover {
 a:link {
   text-decoration: none;
 }
+
+.acc-product-price {
+  font-size: 15px;
+}
