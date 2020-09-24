@@ -36,7 +36,7 @@ function Etc(props) {
               <Link to={'/product/' + product._id}>{product.name}</Link>
             </div>
 
-            <div className="product-price">$ {product.price}</div>
+            <div className="acc-product-price">$ {product.price}</div>
           </div>
         </li>
       ))}
