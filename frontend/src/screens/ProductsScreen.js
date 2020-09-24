@@ -6,8 +6,7 @@ import {
   listProducts,
   deleteProduct,
 } from '../actions/productActions';
-import { Link } from 'react-router-dom';
-import data from '../data';
+import axios from 'axios';
 
 function ProductsScreen(props) {
   // const productSave = useSelector((state) => state.productDetails);
@@ -18,6 +17,7 @@ function ProductsScreen(props) {
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
   const [description, setDescription] = useState('');
+  const [uploading, setUploading] = useState(false);
 
   const productList = useSelector((state) => state.productList);
   const { loading, products, error } = productList;
@@ -40,10 +40,10 @@ function ProductsScreen(props) {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(deleteProduct());
-    return () => {};
-  }, []);
+  // useEffect(() => {
+  //   dispatch(deleteProduct());
+  //   return () => {};
+  // }, []);
 
   useEffect(() => {
     if (successSave) {
@@ -63,6 +63,7 @@ function ProductsScreen(props) {
   };
 
   const submitHandler = (e) => {
+    e.preventDefault();
     dispatch(saveProduct({ _id: id, name, price, image, description }));
   };
 
@@ -85,6 +86,27 @@ function ProductsScreen(props) {
     if (name == 'description') {
       setDescription(value);
     }
+  };
+
+  const uploadFileHandler = (e) => {
+    const file = e.target.files[0];
+    const bodyFormData = new FormData();
+    bodyFormData.append('image', file);
+    setUploading(true);
+    axios
+      .post('/api/uploads', bodyFormData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
+      .then((response) => {
+        setImage(response.data);
+        setUploading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setUploading(false);
+      });
   };
 
   return (
@@ -110,43 +132,46 @@ function ProductsScreen(props) {
               <li>
                 <label htmlFor="name">Name</label>
                 <input
+                  type="text"
                   name="name"
                   value={name}
                   id="name"
-                  onChange={handleChange}
-                />
+                  onChange={(e) => setName(e.target.value)}
+                ></input>
               </li>
 
               <li>
-                <label htmlFor="name">Image</label>
+                <label htmlFor="image">Image</label>
                 <input
                   type="text"
                   name="image"
                   value={image}
                   id="image"
-                  onChange={handleChange}
-                />
+                  onChange={(e) => setImage(e.target.value)}
+                ></input>
+                <input type="file" onChange={uploadFileHandler}></input>
+                {uploading && <div>Uploading...</div>}
               </li>
 
               <li>
-                <label htmlFor="name">Price</label>
+                <label htmlFor="price">Price</label>
                 <input
                   type="text"
                   name="price"
                   value={price}
                   id="price"
-                  onChange={handleChange}
-                />
+                  onChange={(e) => setPrice(e.target.value)}
+                ></input>
               </li>
 
               <li>
-                <label htmlFor="name">Description</label>
+                <label htmlFor="description">Description</label>
                 <textarea
                   name="description"
-                  id="description"
                   value={description}
-                  onChange={handleChange}
-                />
+                  id="description"
+                  onChange={(e) => setDescription(e.target.value)}
+                ></textarea>
               </li>
 
               <li>
@@ -157,7 +182,7 @@ function ProductsScreen(props) {
 
               <li>
                 <button
-                  type="submit"
+                  type="button"
                   onClick={() => setModalVisible(false)}
                   className="button secondary"
                 >
@@ -185,6 +210,7 @@ function ProductsScreen(props) {
                 <td>{product._id}</td>
                 <td>{product.name}</td>
                 <td>{product.price}</td>
+                {/* <td>{product.image}</td> */}
                 <td>
                   <button className="button" onClick={() => openModal(product)}>
                     Edit

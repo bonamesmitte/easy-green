@@ -24,6 +24,10 @@ import PaymentScreen from './screens/PaymentScreen';
 import Thankyou from './screens/Thankyou';
 import Admin from './screens/Admin';
 import Login from './screens/Login';
+import Etc from './screens/EasyEat';
+import AllProductScreen from './screens/AllProductScreen';
+import AllGrowProductScreen from './screens/AllGrowProductScreen';
+import data1 from './data1';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -89,6 +93,11 @@ function App() {
             <li>
               <Link to="/acc">Acc.</Link>
             </li>
+
+            <li>
+              <Link to="/etc">etc.</Link>
+            </li>
+
             <br />
             <br />
             <li>
@@ -129,6 +138,9 @@ function App() {
             <Route path="/ordercomplete" component={Thankyou} />
             <Route path="/admin" component={Admin} />
             <Route path="/profile" component={Login} />
+            <Route path="/etc" component={Etc} />
+            <Route path="/alleat/:id" component={AllProductScreen} />
+            <Route path="/allgrow/:id" component={AllGrowProductScreen} />
           </div>
         </main>
         <footer className="footer">© Alice Yoo 2020</footer>

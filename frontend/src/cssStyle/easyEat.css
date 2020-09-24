@@ -120,18 +120,18 @@ a:hover {
 }
 
 .product-image {
-  max-width: 34rem;
-  max-height: 34rem;
+  max-width: 20rem;
+  max-height: 20rem;
 }
 
 .product-name {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   list-style-type: none;
 }
 
-.product-price {
-  font-size: 2rem;
+.price {
+  font-size: 1.5rem;
   /* font-weight: bold; */
 }
 
