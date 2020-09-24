@@ -39,7 +39,7 @@ function AllProductScreen(props) {
             <li>
               <h4>{product.name}</h4>
             </li>
-            <li>{product.price}</li>
+            <li>$ {product.price}</li>
             <li>
               Description:
               <div>{product.description}</div>
@@ -52,6 +52,7 @@ function AllProductScreen(props) {
             <li>
               Price: <b>$ {product.price}</b>
             </li>
+            <br />
             <li>
               Qty:
               <select
@@ -72,11 +73,15 @@ function AllProductScreen(props) {
                 <option value={10}>10</option>
               </select>
             </li>
-            {/* Option:
-            <select>
-              <option>Ready To Eat</option>
-              <option>In Pot</option>
-            </select> */}
+            <br />
+            <li>
+              Option:
+              <select>
+                <option>Ready To Eat</option>
+                <option>In Pot</option>
+              </select>
+            </li>
+            <br />
             <li>
               <button onClick={handleAddToCart} className="button">
                 Add to Cart

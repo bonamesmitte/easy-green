@@ -8,7 +8,7 @@
 }
 
 .details-image {
-  flex: 2 1 60rem;
+  flex: 0.5 1 60rem;
 }
 
 .details-image img {
@@ -18,10 +18,12 @@
 
 .details-info {
   flex: 1 1 30rem;
+  font-size: 17px;
 }
 
 .details-action {
   flex: 1 1 30rem;
+  font-size: 16px;
 }
 
 .details-info ul,
@@ -36,8 +38,9 @@
 }
 
 .back-to-result {
-  padding: 1rem;
+  padding: 3rem;
   cursor: pointer;
+  font-size: 20px;
 }
 
 .details-action {
@@ -56,6 +59,7 @@
   border: 0.1rem #808080 solid;
   cursor: pointer;
   border-radius: 0.5rem;
+  background-color: palegreen;
 }
 
 .button:hover {

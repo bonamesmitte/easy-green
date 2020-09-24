@@ -35,7 +35,7 @@ function CartScreen(props) {
         <ul className="cart-list-container">
           <li>
             <h3>Shopping Cart</h3>
-            <div>Price</div>
+            <h2>Price</h2>
           </li>
           {cartItems.length === 0 ? (
             <div>Cart is empty</div>
@@ -46,10 +46,10 @@ function CartScreen(props) {
                   <img src={item.image} alt="product" />
                 </div>
                 <div className="cart-name">
-                  <div>
+                  <div className="cart-product-name">
                     <Link to={'/product/' + item.product}>{item.name}</Link>
                   </div>
-                  <div>
+                  <div className="cart-product-qty">
                     Qty:
                     <select
                       value={item.qty}

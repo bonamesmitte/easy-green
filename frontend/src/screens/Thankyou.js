@@ -12,7 +12,7 @@ const Thankyou = () => (
         <img
           className="big-image"
           src="https://image.freepik.com/free-photo/lined-up-vibrant-green-lucky-heart-hoya-kerrii-plants-closed-up-background_76000-849.jpg"
-          width="1000"
+          width="900"
           height="550"
           alt="vertical farming"
         />
