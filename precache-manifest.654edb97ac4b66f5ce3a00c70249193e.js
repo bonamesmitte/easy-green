@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "563f3e86020e5115f47bfbae40048ad0",
+    "revision": "0518150ffbc764b350924067e784c49c",
     "url": "/easy-green/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/easy-green/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "8077d616a966843be8d5",
+    "revision": "901baf9f7653cdee6bec",
     "url": "/easy-green/static/css/main.380ece2d.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/easy-green/static/js/2.7a1894d7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8077d616a966843be8d5",
-    "url": "/easy-green/static/js/main.da8a28d8.chunk.js"
+    "revision": "901baf9f7653cdee6bec",
+    "url": "/easy-green/static/js/main.3858fa3a.chunk.js"
   },
   {
     "revision": "00e76535a45dfc132b1c",
