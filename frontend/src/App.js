@@ -39,8 +39,10 @@ function App() {
     document.querySelector('.sidebar').classList.remove('open');
   };
 
+  console.log('v1.0');
+
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       {' '}
       <div className="grid-container">
         <header className="header">

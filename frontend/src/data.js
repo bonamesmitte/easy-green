@@ -142,6 +142,18 @@ export default {
       image: '/images/vegetable/argula.jpeg',
       price: 2.5,
     },
+    {
+      _id: '24',
+      name: 'Trgula',
+      image: '/image/zz.png',
+      price: 2.5,
+    },
+    {
+      _id: '25',
+      name: 'Yrgula',
+      image: '/image/green.jpg',
+      price: 2.5,
+    },
   ],
 };
 
